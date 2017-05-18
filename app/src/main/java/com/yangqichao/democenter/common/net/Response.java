@@ -1,8 +1,8 @@
-package com.yangqichao.commonlib.net;
+package com.yangqichao.democenter.common.net;
 
 import android.text.TextUtils;
 
-import com.yangqichao.commonlib.Constant;
+import com.yangqichao.democenter.common.Constant;
 
 
 /**

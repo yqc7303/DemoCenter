@@ -1,4 +1,4 @@
-package com.yangqichao.commonlib.net;
+package com.yangqichao.democenter.common.net;
 
 /**
  * Created by Administrator on 2016/8/10 0010.

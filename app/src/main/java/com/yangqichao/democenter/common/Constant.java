@@ -1,4 +1,4 @@
-package com.yangqichao.commonlib;
+package com.yangqichao.democenter.common;
 
 /**
  * Created by yangqc on 2017/3/23.

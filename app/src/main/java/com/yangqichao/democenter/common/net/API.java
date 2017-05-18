@@ -1,4 +1,4 @@
-package com.yangqichao.commonlib.net;
+package com.yangqichao.democenter.common.net;
 
 
 import retrofit2.http.GET;

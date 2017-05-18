@@ -1,7 +1,17 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
+apply from: 'tinker-support.gradle'
 
 android {
+    signingConfigs {
+        release {
+            keyAlias 'demo'
+            keyPassword '137459'
+            storeFile file('/Users/yangqichao/DemoCenter/app/demoKey.jks')
+            storePassword '137459'
+            v2SigningEnabled false
+        }
+    }
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
@@ -13,9 +23,15 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
+        debug {
+            buildConfigField("String", "BaseUrl", debug_base_url)
+        }
         release {
             minifyEnabled false
+            buildConfigField("String", "BaseUrl", release_base_url)
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+
         }
     }
 }
@@ -25,9 +41,16 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
-    testCompile 'junit:junit:4.12'
-
     compile project(':commonlib')
+
+    /**
+     * https://github.com/JakeWharton/butterknife
+     * todo:Project.gradle:buildscript->dependencies->classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
+     * todo:module:apply plugin: 'com.jakewharton.butterknife'
+     */
+    compile 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 }

@@ -12,6 +12,8 @@ android {
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        multiDexEnabled true;
+
     }
     buildTypes {
         debug {
@@ -24,6 +26,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
+
     }
 }
 
@@ -32,10 +35,13 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    testCompile 'junit:junit:4.12'
     compile 'com.android.support:design:25.3.1'
     compile 'com.android.support:support-v4:25.3.1'
     compile 'com.google.code.gson:gson:2.2.4'
     compile 'com.android.support:cardview-v7:25.3.1'
+    //multidex
+    compile 'com.android.support:multidex:1.0.1'
     //net
     compile 'com.squareup.retrofit2:retrofit:2.1.0'
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
@@ -50,12 +56,11 @@ dependencies {
 //    compile 'com.ashokvarma.android:bottom-navigation-bar:1.3.0'
 
     /**
-     * https://github.com/JakeWharton/butterknife
-     * todo:Project.gradle:buildscript->dependencies->classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
-     * todo:module:apply plugin: 'com.jakewharton.butterknife'
+     * bugly
      */
-    compile 'com.jakewharton:butterknife:8.5.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+//    apply from: 'tinker-support.gradle'
+
 
 
 

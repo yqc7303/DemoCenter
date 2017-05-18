@@ -1,11 +1,11 @@
-package com.yangqichao.commonlib.net;
+package com.yangqichao.democenter.common.net;
 
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.yangqichao.commonlib.Constant;
-import com.yangqichao.commonlib.APP;
+import com.yangqichao.democenter.common.APP;
+import com.yangqichao.democenter.common.Constant;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;

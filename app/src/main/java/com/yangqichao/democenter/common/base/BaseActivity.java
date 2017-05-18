@@ -1,4 +1,4 @@
-package com.yangqichao.commonlib.base;
+package com.yangqichao.democenter.common.base;
 
 import android.app.Activity;
 import android.os.Bundle;
