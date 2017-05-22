@@ -80,4 +80,9 @@ dependencies {
      */
     //compile 'com.jph.takephoto:takephoto_library:4.0.3'
 
+    /**
+     *https://github.com/FolioReader/FolioReader-Android
+     */
+    compile 'com.folioreader:folioreader:0.2.5'
+
 }
