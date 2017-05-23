@@ -45,6 +45,9 @@
         <activity android:name=".business.ui.EpubReaderActivity"></activity>
 
         <activity android:name="com.folioreader.activity.FolioActivity"/>
+
+        <activity android:name=".business.ui.HomeActivity"/>
+
     </application>
 
 </manifest>
