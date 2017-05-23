@@ -10,6 +10,9 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.folioreader.activity.FolioActivity;
+import com.igexin.sdk.PushManager;
+import com.yangqichao.democenter.business.service.GetuiIntentService;
+import com.yangqichao.democenter.business.service.GetuiPushService;
 import com.yangqichao.democenter.business.bean.SampleBean;
 import com.yangqichao.democenter.business.ui.EpubReaderActivity;
 import com.yangqichao.democenter.business.ui.HomeActivity;
@@ -65,6 +68,9 @@ public class MainActivity extends BaseActivity {
                 startActivity(intent);
             }
         });
+
+        PushManager.getInstance().initialize(this.getApplicationContext(), GetuiPushService.class);
+        PushManager.getInstance().registerPushIntentService(this.getApplicationContext(), GetuiIntentService.class);
 
     }
 

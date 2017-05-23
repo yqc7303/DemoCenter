@@ -42,12 +42,17 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name=".business.ui.EpubReaderActivity"></activity>
+        <activity android:name=".business.ui.EpubReaderActivity" />
+        <activity android:name="com.folioreader.activity.FolioActivity" />
+        <activity android:name=".business.ui.HomeActivity" />
 
-        <activity android:name="com.folioreader.activity.FolioActivity"/>
+        <service
+            android:name=".business.service.GetuiPushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":pushservice"></service>
 
-        <activity android:name=".business.ui.HomeActivity"/>
-
+        <service android:name=".business.service.GetuiIntentService"/>
     </application>
 
 </manifest>
