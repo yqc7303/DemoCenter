@@ -16,6 +16,7 @@ import com.yangqichao.democenter.business.service.GetuiPushService;
 import com.yangqichao.democenter.business.bean.SampleBean;
 import com.yangqichao.democenter.business.ui.EpubReaderActivity;
 import com.yangqichao.democenter.business.ui.HomeActivity;
+import com.yangqichao.democenter.business.ui.LocationActivity;
 import com.yangqichao.democenter.common.base.BaseActivity;
 
 import java.util.ArrayList;
@@ -45,6 +46,8 @@ public class MainActivity extends BaseActivity {
         sampleBeanList = new ArrayList<>();
         sampleBeanList.add(new SampleBean("ePud阅读器", EpubReaderActivity.class));
         sampleBeanList.add(new SampleBean("ePud", HomeActivity.class));
+
+        sampleBeanList.add(new SampleBean("高德定位", LocationActivity.class));
 
         adapter = new BaseQuickAdapter<SampleBean, BaseViewHolder>(R.layout.item_demo,sampleBeanList) {
             @Override
